@@ -1,7 +1,0 @@
-package simple;
-
-public class Self1 {
-	public static void main(String[] args) {
-		
-	}
-}

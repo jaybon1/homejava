@@ -26,6 +26,7 @@ public class Circle {
 		System.out.println(pizza.getArea());;
 		
 		Rectangle r1 = new Rectangle();
+		r1.
 	}
 }
 // »≠¿Ã∆√!!!

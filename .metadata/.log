@@ -19066,3 +19066,123 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:31:19.136
 !MESSAGE executing callback sts4.classpath.OhtdkSTC SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:19.371
+!MESSAGE Preparing classpath changed notification javastudy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:19.372
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:19.373
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:19.374
+!MESSAGE buffering callback sts4.classpath.OhtdkSTC javastudy false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:19.375
+!MESSAGE executing callback sts4.classpath.OhtdkSTC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:19.378
+!MESSAGE executing callback sts4.classpath.OhtdkSTC SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:35.262
+!MESSAGE Preparing classpath changed notification javastudy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:35.263
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:35.265
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:35.266
+!MESSAGE buffering callback sts4.classpath.OhtdkSTC javastudy false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:35.267
+!MESSAGE executing callback sts4.classpath.OhtdkSTC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:35.269
+!MESSAGE executing callback sts4.classpath.OhtdkSTC SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:36.454
+!MESSAGE Preparing classpath changed notification javastudy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:36.455
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:36.457
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:36.459
+!MESSAGE buffering callback sts4.classpath.OhtdkSTC javastudy false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:36.460
+!MESSAGE executing callback sts4.classpath.OhtdkSTC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:36.464
+!MESSAGE executing callback sts4.classpath.OhtdkSTC SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:51.159
+!MESSAGE Preparing classpath changed notification javastudy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:51.162
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:51.163
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:51.165
+!MESSAGE buffering callback sts4.classpath.OhtdkSTC javastudy false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:51.165
+!MESSAGE executing callback sts4.classpath.OhtdkSTC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:39:51.169
+!MESSAGE executing callback sts4.classpath.OhtdkSTC SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:11.864
+!MESSAGE Preparing classpath changed notification javastudy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:11.865
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:11.867
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:11.868
+!MESSAGE buffering callback sts4.classpath.OhtdkSTC javastudy false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:11.869
+!MESSAGE executing callback sts4.classpath.OhtdkSTC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:11.871
+!MESSAGE executing callback sts4.classpath.OhtdkSTC SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:26.437
+!MESSAGE Preparing classpath changed notification javastudy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:26.438
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:26.439
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:26.441
+!MESSAGE buffering callback sts4.classpath.OhtdkSTC javastudy false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:26.441
+!MESSAGE executing callback sts4.classpath.OhtdkSTC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:26.445
+!MESSAGE executing callback sts4.classpath.OhtdkSTC SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:49.458
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.OhtdkSTC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:49.459
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.OhtdkSTC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:49.460
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-18 23:40:49.461
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.OhtdkSTC => OK
