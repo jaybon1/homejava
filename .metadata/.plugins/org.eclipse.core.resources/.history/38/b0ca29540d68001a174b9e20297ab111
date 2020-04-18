@@ -1,0 +1,15 @@
+package ch02;
+
+class Person{
+	String name;
+	int age;
+	char gender;
+	String email;
+	String phone;
+}
+
+public class VarEx06 {
+	public static void main(String[] args) {
+		
+	}
+}

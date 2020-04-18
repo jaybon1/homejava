@@ -1,0 +1,13 @@
+package ch02;
+
+class 동물{
+	String name = "사자";
+}
+
+public class VarEx05 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

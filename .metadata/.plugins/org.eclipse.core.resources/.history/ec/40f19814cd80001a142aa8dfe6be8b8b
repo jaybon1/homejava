@@ -1,0 +1,19 @@
+package simple;
+
+class Data1<T>{
+	
+	T value;
+	
+}
+
+public class Gene2 {
+	public static void main(String[] args) {
+		St
+		
+		Data1<String> a = new Data1<>();
+		
+		a.value = "°¡³ª´Ù";
+		
+	}
+}
+

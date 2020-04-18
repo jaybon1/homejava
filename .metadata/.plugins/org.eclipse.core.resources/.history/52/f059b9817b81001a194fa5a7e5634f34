@@ -1,0 +1,14 @@
+package simple;
+
+import java.util.ArrayList;
+
+public class Self1 {
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> arr1 = new ArrayList<>();
+		
+		
+		
+		
+	}
+}

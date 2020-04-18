@@ -1,0 +1,15 @@
+package ch02;
+
+class Person{
+	String name = "È«±æµ¿";
+	int age = 33;
+	char gender = '³²';
+	String email = "example@gmail.com";
+	String phone = "010-1234-5678";
+}
+
+public class VarEx06 {
+	public static void main(String[] args) {
+		
+	}
+}

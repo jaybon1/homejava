@@ -1,0 +1,18 @@
+package simple;
+
+public class Over {
+	
+	static String 己荐具() {
+		
+		return "匙?";
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+		System.out.println(己荐具());
+		
+		
+	}
+}

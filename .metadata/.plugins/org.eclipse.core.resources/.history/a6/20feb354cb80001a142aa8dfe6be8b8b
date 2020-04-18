@@ -1,0 +1,19 @@
+package simple;
+
+class 음료 {
+
+}
+
+class 과자 {
+
+}
+
+class 바구니 {
+	음료 a;
+	과자 b;
+
+}
+
+public class Compo {
+
+}

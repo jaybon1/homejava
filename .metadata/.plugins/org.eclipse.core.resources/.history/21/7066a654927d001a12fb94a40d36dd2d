@@ -1,0 +1,36 @@
+package ch02;
+
+class 우리집 {
+	String 집이름;
+	int 평수;
+	int 층수;
+	String 주소;
+	
+	public 우리집() {
+		this.집이름 = "없음";
+		this.평수 = 10;
+		this.층수 = 10;
+		this.주소 = "없음";
+	}
+	
+	public 우리집(String 집이름, int 평수, int 층수, String 주소) {
+		this.집이름 = 집이름;
+		this.평수 = 평수;
+		this.층수 = 층수;
+		this.주소 = 주소;
+	}
+	
+	
+	
+}
+
+public class Class1 {
+	public static void main(String[] args) {
+		
+		우리집 my = new 우리집("한빛", 24, 2, "부산시 사하구");
+		
+		System.out.println(my.집이름);
+		
+	}
+}
+

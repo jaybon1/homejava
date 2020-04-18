@@ -1,0 +1,15 @@
+package ch02;
+
+public class VarEx03 {
+
+	public static void main(String[] args) {
+		char s1 = '가'; // 2바이트
+		System.out.println(s1);
+		
+		s1 = '나';
+		System.out.println(s1);
+		
+		char c1 = '가';
+	}
+
+}

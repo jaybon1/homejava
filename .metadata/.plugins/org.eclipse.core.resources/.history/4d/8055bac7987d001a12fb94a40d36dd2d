@@ -1,0 +1,15 @@
+package ch02;
+
+class 이병근{
+	int age = 25;
+}
+
+public class Gett1 {
+	public static void main(String[] args) {
+		
+		이병근 lee = new 이병근();
+		
+		System.out.println(lee.age);	
+	}
+	
+}

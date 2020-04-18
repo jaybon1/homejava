@@ -1,0 +1,14 @@
+package simple;
+
+public class ForEx02 {
+	public static void main(String[] args) {
+		
+		int arr[] = new int[10];
+		
+		for ( i :arr) {
+			
+		}
+		
+		
+	}
+}

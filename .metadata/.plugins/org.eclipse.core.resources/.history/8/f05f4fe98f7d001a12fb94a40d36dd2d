@@ -1,0 +1,15 @@
+package ch02;
+
+public class Test5 {
+	
+	static int num = 1;
+	
+	static int getNum() {
+		int num = 10;
+		return num;
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

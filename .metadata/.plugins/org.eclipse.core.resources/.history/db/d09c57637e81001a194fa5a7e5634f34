@@ -1,0 +1,32 @@
+package simple;
+
+import java.util.ArrayList;
+
+public class Self1 {
+	public static void main(String[] args) {
+		
+//		ArrayList<Integer> arr1 = new ArrayList<>();
+//		ArrayList<Integer> arr2 = new ArrayList<>();
+//		
+//		for (int i = 1; i < 5000; i++) {
+//			arr1.add(i);
+//		}
+//		
+		int ori = 100;
+		int temp = ori;
+		int temp1 = 0;
+		int sum = ori;
+		for (int i = 0; i < Integer.toString(ori).length() ; i++) {
+			temp = (int)(temp/(Math.pow(10, Integer.toString(temp).length() - 1)));
+			temp1 =(int)(temp%(Math.pow(10, Integer.toString(temp).length() - 1)));
+			System.out.println(temp);
+			sum = sum + temp;
+		}
+
+		
+		System.out.println(sum);
+
+		
+		
+	}
+}

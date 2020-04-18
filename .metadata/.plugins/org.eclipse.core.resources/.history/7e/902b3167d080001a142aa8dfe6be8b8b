@@ -1,0 +1,10 @@
+package simple;
+
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+
+public class Buff {
+	public static void main(String[] args) {
+		bw = new BufferedWriter(new OutputStreamWriter(System.in));
+	}
+}

@@ -1,0 +1,30 @@
+package simple;
+
+import java.util.ArrayList;
+
+public class Self1 {
+	public static void main(String[] args) {
+		
+//		ArrayList<Integer> arr1 = new ArrayList<>();
+//		ArrayList<Integer> arr2 = new ArrayList<>();
+//		
+//		for (int i = 1; i < 5000; i++) {
+//			arr1.add(i);
+//		}
+		
+		
+		int temp = 0;
+		int sum = 0;
+		for (int i = 0; i < Integer.toString(100).length() ; i++) {
+			sum = sum + 
+			temp = 
+		}
+
+		
+		System.out.println(Math.pow(10, Integer.toString(100).length() - 1));
+		
+		
+		
+		
+	}
+}

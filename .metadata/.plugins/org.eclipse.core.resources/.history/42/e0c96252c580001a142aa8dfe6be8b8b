@@ -1,0 +1,19 @@
+package simple;
+
+class Animal1{
+	String name;
+	String sound;
+	
+	public Animal(String name, String sound) {
+
+	}
+}
+
+
+
+
+public class Con1 {
+	public static void main(String[] args) {
+		
+	}
+}
