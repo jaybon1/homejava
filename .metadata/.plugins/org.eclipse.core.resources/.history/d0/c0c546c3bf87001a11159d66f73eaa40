@@ -1,0 +1,52 @@
+package example;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+class Info {
+	String name;
+	String loc;
+	
+	public Info(String name, String loc) {
+		this.name = name;
+		this.loc = loc;
+	}
+}
+
+public class TestDB {
+
+	// 전역 공간에 쿼리에 필요한 레퍼런스를 준비하기
+	
+
+	// DB에 연결하기
+	void openCon() throws Exception {
+
+	}
+
+	// DB 연결 끊기
+	void closeCon() throws Exception {
+
+	}
+
+	// 데이터 넣기
+	void insertData(String name, String loc) throws Exception {
+
+	}
+
+	// 데이터 가져오기
+	void selectData() throws Exception { 
+		
+	}
+	
+	// 데이터 지우기
+	void deleteData(String name) throws Exception {
+		
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

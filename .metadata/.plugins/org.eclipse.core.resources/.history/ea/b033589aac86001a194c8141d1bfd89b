@@ -1,0 +1,12 @@
+package exModule;
+
+public class Say {
+	
+	static void hello() {
+		
+		System.out.println("æ»≥Á«œººø‰");
+		
+	}
+	
+}
+

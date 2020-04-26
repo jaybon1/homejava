@@ -1,0 +1,7 @@
+package sms;
+
+public class SmsApp {
+	public static void main(String[] args) {
+		
+	}
+}

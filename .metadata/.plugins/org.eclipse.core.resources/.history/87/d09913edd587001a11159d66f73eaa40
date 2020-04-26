@@ -1,0 +1,9 @@
+package sms;
+
+public class SmsApp {
+	public static void main(String[] args) {
+		SmsEx2 test = new SmsEx2();
+		
+		test.ExampleSend("01000000000", "æ»≥Á«œººø‰");
+	}
+}

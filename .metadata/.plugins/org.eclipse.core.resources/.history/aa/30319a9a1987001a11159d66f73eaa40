@@ -1,0 +1,10 @@
+package slug;
+
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
+public class Test1 {
+	public static void main(String[] args) {
+		Timestamp a = Timestamp.valueOf(LocalDateTime.now());
+	}
+}

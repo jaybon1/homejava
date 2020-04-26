@@ -1,0 +1,11 @@
+package quiz;
+
+public class Level001 {
+	
+	String a;
+	
+	public static void main(String[] args) {
+	System.out.println(a);
+	
+	}
+}

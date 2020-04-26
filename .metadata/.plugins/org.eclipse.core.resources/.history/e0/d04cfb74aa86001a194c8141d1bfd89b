@@ -1,0 +1,16 @@
+package example;
+
+// 기능을 함수화하기
+
+// main도 함수다.
+
+// 다만 main은 해당 파일에서만 실행되기 때문에 다른파일에서 끌어 쓸 수가 없다
+
+public class Function1 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("안녕하세요");
+		
+	}
+}

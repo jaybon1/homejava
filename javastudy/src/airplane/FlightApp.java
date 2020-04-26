@@ -13,13 +13,10 @@ import com.google.gson.Gson;
 public class FlightApp {
 
 	public static int getTotalCount(String depAirportId, String arrAirportId, long depPlandTime) {
+		
 		try {
 			// 1번 주소 객체 만들기
-			URL url = new URL(
-					"http://openapi.tago.go.kr/openapi/service/DmstcFlightNvgInfoService/getFlightOpratInfoList?serviceKey=TYJuOuhQd%2BPQB9hRLr96SDnMNeegd0U3g9mOpBpumr6DwZ6sgto5MjcX%2F8rUKaIKC3AHWmO4gTEHK39cCxwLug%3D%3D&numOfRows=50&pageNo=1&depAirportId="
-							+ FlightInfoService.airPortId.get(depAirportId) + "&arrAirportId="
-							+ FlightInfoService.airPortId.get(arrAirportId) + "&depPlandTime=" + depPlandTime
-							+ "&_type=json");
+			URL url = new URL("json링크 주소 입력");
 
 			// 2번 스트림 연결
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -30,11 +27,13 @@ public class FlightApp {
 			// 4. 문자 더하기
 			StringBuilder sb = new StringBuilder();
 
+			// 스트링빌더에 버퍼에서 받은 문자열을 한줄씩 추가하기
 			String input = "";
 			while ((input = br.readLine()) != null) {
 				sb.append(input);
 			}
-
+			
+			// 입력이 잘 되었는지 테스트
 			System.out.println(sb.toString());
 			System.out.println();
 
@@ -57,7 +56,7 @@ public class FlightApp {
 		try {
 			// 1번 주소 객체 만들기
 			URL url = new URL(
-					"http://openapi.tago.go.kr/openapi/service/DmstcFlightNvgInfoService/getFlightOpratInfoList?serviceKey=TYJuOuhQd%2BPQB9hRLr96SDnMNeegd0U3g9mOpBpumr6DwZ6sgto5MjcX%2F8rUKaIKC3AHWmO4gTEHK39cCxwLug%3D%3D&numOfRows=50&pageNo="
+					"http://openapi.tago.go.kr/openapi/service/DmstcFlightNvgInfoService/getFlightOpratInfoList?serviceKey=서비스키입력&numOfRows=50&pageNo="
 							+ page + "&depAirportId=" + FlightInfoService.airPortId.get(depAirportId) + "&arrAirportId="
 							+ FlightInfoService.airPortId.get(arrAirportId) + "&depPlandTime=" + depPlandTime
 							+ "&_type=json");

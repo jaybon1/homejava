@@ -1,0 +1,18 @@
+package example;
+
+
+// 데이터를 함수화 하기
+class Data{
+	
+	private String info = "데이터";
+	
+	
+			
+}
+
+public class Data1 {
+
+	public static void main(String[] args) {
+		
+	}
+}

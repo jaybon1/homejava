@@ -1,0 +1,23 @@
+package example;
+
+
+// 모듈화 하기
+class Data{
+	
+	private String info = "데이터";
+	
+	public String getInfo() {
+		return info;
+	}
+			
+}
+
+// main에서는 모듈에서 가공한 정보를 가져와서 쓰기만 하면된다
+public class Data1 {
+
+	public static void main(String[] args) {
+		
+		System.out.println();
+		
+	}
+}

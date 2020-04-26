@@ -1,0 +1,24 @@
+package example;
+
+
+class Say {
+	
+	static void hello() {
+		
+		System.out.println("æ»≥Á«œººø‰");
+		
+	}
+	
+}
+
+
+
+public class Function1 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("æ»≥Á«œººø‰");
+		
+	}
+}
+

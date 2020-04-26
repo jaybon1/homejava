@@ -1,0 +1,22 @@
+package example;
+
+
+class say {
+	
+	static void hello() {
+		
+	}
+	
+}
+
+
+
+public class Function1 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("æ»≥Á«œººø‰");
+		
+	}
+}
+

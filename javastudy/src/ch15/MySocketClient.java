@@ -16,7 +16,7 @@ public class MySocketClient {
 		
 		//스트림
 		//"localhost" 또는 127.0.0.1 는 약속된 내용 - 내 컴퓨터의 내부 주소
-		socket = new Socket("192.168.0.115", 15000); // 서버소켓의 accept() 함수를 호출
+		socket = new Socket("localhost", 15000); // 서버소켓의 accept() 함수를 호출
 		
 		// 소켓 - 버퍼드라이터 연결
 		bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
