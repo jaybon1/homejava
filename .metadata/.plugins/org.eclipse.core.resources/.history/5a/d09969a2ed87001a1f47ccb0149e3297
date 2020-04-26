@@ -28,8 +28,9 @@ public class Slug1 {
 	
 	private ImageIcon icon1 = new ImageIcon("img/shot.png");
 	private ImageIcon icon2 = new ImageIcon("img/shotR.png");
+	Image img = icon1.getImage();
 	
-	private int fieldY = frameY - (100+icon1.getImage().getHeight(panel));
+	private int fieldY = frameY - (150+icon1.getImage().getHeight(panel));
 	
 	private int p1X = 50;
 	private int p1Y = fieldY;
@@ -90,10 +91,18 @@ public class Slug1 {
 					while (true) {
 						if (p1Left == 1) {
 							if(p1X >0) {
+								if(img.equals(icon1.getImage())) {
+									p1X = p1X - 70;
+								}
+								img = icon2.getImage();
 								p1X = p1X - 5;
 							}
 						}else if (p1Right == 1) {
 							if(p1X < (frameX/2 - p1W)) {
+								if(img.equals(icon2.getImage())) {
+									p1X = p1X + 70;
+								}
+								img = icon1.getImage();
 								p1X = p1X + 5;
 							} else {
 								
@@ -158,44 +167,30 @@ public class Slug1 {
 			super.paintComponent(g);
 			
 			Image bg = stage1.getImage();
-			g.drawImage(bg, p1X, p1Y, p1W*2, p1H*2, this);
+			g.drawImage(bg, 0, 0, (int)(bg.getWidth(this)*2.5), (int)(bg.getHeight(this)*2.5), this);
 			
-			Image img = icon1.getImage();
 			p1W = img.getWidth(this);
 			p1H = img.getHeight(this);
-			g.drawImage(img, p1X, p1Y, p1W*2, p1H*2, this);
+			g.drawImage(img, p1X, p1Y, (int)(p1W*2.5), (int)(p1H*2.5), this);
 		}
 	}
 	
-	
+	// 현재시간을 롱값으로 받는다
 	long getTime() {
 		return Timestamp.valueOf(LocalDateTime.now()).getTime();
 	}
 	
 	
+	// 점프 메서드
 	void jump() {
 		System.out.println("점프시작");
 		p1JumpOver = false;
 		
 		long t1 = getTime();
-		while (true) {
-			p1Y = p1Y - 7;
-			if(getTime() > t1+200) {
-				break;
-			}
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			
-		}
-		
-		t1 = getTime();
 		long t2;
 		while (true) {
 			t2 = getTime() - t1;
-			p1Y = p1Y - (5 - (int)((t2+t2)/80));
+			p1Y = p1Y - (9 - (int)((t2)/40));
 			if(p1Y >= fieldY) {
 				p1Y = fieldY;
 				break;

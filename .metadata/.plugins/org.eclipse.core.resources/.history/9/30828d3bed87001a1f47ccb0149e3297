@@ -24,19 +24,19 @@ public class Slug1 {
 	
 	private MyJp panel;
 	
+	private ImageIcon stage1 = new ImageIcon("img/bgtest.png");
+	
 	private ImageIcon icon1 = new ImageIcon("img/shot.png");
 	private ImageIcon icon2 = new ImageIcon("img/shotR.png");
+	Image img = icon1.getImage();
 	
-	private int fieldY = frameY - (100+icon1.getImage().getHeight(panel));
+	private int fieldY = frameY - (150+icon1.getImage().getHeight(panel));
 	
 	private int p1X = 50;
 	private int p1Y = fieldY;
 	private int p1W = 0;
-	private int p1H = fieldY;
-	private int p1Jump = 0;
-	
-	
-	private boolean jumpOver = true;
+	private int p1H = 0;
+	private boolean p1JumpOver = true;
 	
 	private int p1Left;
 	private int p1Right;
@@ -91,14 +91,24 @@ public class Slug1 {
 					while (true) {
 						if (p1Left == 1) {
 							if(p1X >0) {
+								if(img.equals(icon1.getImage())) {
+									p1X = p1X - 70;
+								}
+								img = icon2.getImage();
 								p1X = p1X - 5;
 							}
 						}else if (p1Right == 1) {
-							if(p1X < (frameX/2.2 - p1W)) {
+							if(p1X < (frameX/2 - p1W)) {
+								if(img.equals(icon2.getImage())) {
+									p1X = p1X + 70;
+								}
+								img = icon1.getImage();
 								p1X = p1X + 5;
+							} else {
+								
 							}
 						}
-						if (p1CKey == 1 && jumpOver) {
+						if (p1CKey == 1 && p1JumpOver) {
 							new Thread(new Runnable() {
 								
 								@Override
@@ -155,14 +165,17 @@ public class Slug1 {
 		@Override
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
-			Image img = icon1.getImage();
+			
+			Image bg = stage1.getImage();
+			g.drawImage(bg, 0, 0, (int)(bg.getWidth(this)*2.5), (int)(bg.getHeight(this)*2.5), this);
+			
 			p1W = img.getWidth(this);
 			p1H = img.getHeight(this);
-			g.drawImage(img, p1X, p1Y, p1W*2, p1H*2, this);
+			g.drawImage(img, p1X, p1Y, (int)(p1W*2.5), (int)(p1H*2.5), this);
 		}
 	}
 	
-	
+	// 현재시간을 롱값으로 받는다
 	long getTime() {
 		return Timestamp.valueOf(LocalDateTime.now()).getTime();
 	}
@@ -170,29 +183,13 @@ public class Slug1 {
 	
 	void jump() {
 		System.out.println("점프시작");
-		jumpOver = false;
+		p1JumpOver = false;
 		
 		long t1 = getTime();
-		while (true) {
-			p1Y = p1Y - 5;
-			System.out.println(p1Y);
-			if(getTime() > t1+300) {
-				break;
-			}
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			
-		}
-		
-		t1 = getTime();
 		long t2;
 		while (true) {
 			t2 = getTime() - t1;
-			p1Y = p1Y - (5 - (int)(Math.pow(t2, 2)/80));
-			System.out.println(p1Y);
+			p1Y = p1Y - (9 - (int)((t2)/40));
 			if(p1Y >= fieldY) {
 				p1Y = fieldY;
 				break;
@@ -204,6 +201,6 @@ public class Slug1 {
 			}
 			
 		}
-		jumpOver = true;
+		p1JumpOver = true;
 	}
 }

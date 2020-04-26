@@ -181,29 +181,16 @@ public class Slug1 {
 	}
 	
 	
+	// 점프 메서드
 	void jump() {
 		System.out.println("점프시작");
 		p1JumpOver = false;
 		
 		long t1 = getTime();
-		while (true) {
-			p1Y = p1Y - 7;
-			if(getTime() > t1+150) {
-				break;
-			}
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			
-		}
-		
-		t1 = getTime();
 		long t2;
 		while (true) {
 			t2 = getTime() - t1;
-			p1Y = p1Y - (5 - (int)((t2)/40));
+			p1Y = p1Y - (9 - (int)((t2)/40));
 			if(p1Y >= fieldY) {
 				p1Y = fieldY;
 				break;

@@ -17,7 +17,7 @@ public class FlightApp {
 		try {
 			// 1번 주소 객체 만들기
 			URL url = new URL("http://openapi.tago.go.kr/openapi/service/DmstcFlightNvgInfoService/getFlightOpratInfoList?serviceKey="+ 
-					"서비스키&numOfRows=50&pageNo=1"+
+					"E9pHtfJ/n+vcsonn5jVxbUuFMu7yefFINum22raGqd8yT9MajkpLT4BNpsAzp7N5KcSBP/vRBPtLF0thMADqPA==&numOfRows=50&pageNo="+
 					"&depAirportId=" + FlightInfoService.airPortId.get(depAirportId) + "&arrAirportId="
 					+ FlightInfoService.airPortId.get(arrAirportId) + "&depPlandTime=" + depPlandTime
 					+ "&_type=json");
@@ -61,7 +61,7 @@ public class FlightApp {
 			// 1번 주소 객체 만들기
 			URL url = new URL(
 					"http://openapi.tago.go.kr/openapi/service/DmstcFlightNvgInfoService/getFlightOpratInfoList?serviceKey="+ 
-					"서비스키&numOfRows=50&pageNo="
+					"E9pHtfJ/n+vcsonn5jVxbUuFMu7yefFINum22raGqd8yT9MajkpLT4BNpsAzp7N5KcSBP/vRBPtLF0thMADqPA==&numOfRows=50&pageNo="
 							+ page + "&depAirportId=" + FlightInfoService.airPortId.get(depAirportId) + "&arrAirportId="
 							+ FlightInfoService.airPortId.get(arrAirportId) + "&depPlandTime=" + depPlandTime
 							+ "&_type=json");
