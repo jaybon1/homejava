@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="p1JumpOver"/>
+		<item key="selection" value="landing"/>
 		<list key="findhistory">
+			<item value="landing"/>
 			<item value="jumpOver"/>
 			<item value="p1Y"/>
 			<item value="integer2"/>

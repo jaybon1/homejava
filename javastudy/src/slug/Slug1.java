@@ -190,7 +190,7 @@ public class Slug1 {
 		long t2;
 		while (true) {
 			t2 = getTime() - t1;
-			p1Y = p1Y - (9 - (int)((t2)/40));
+			p1Y = p1Y - (6 - (int)((t2)/40));
 			if(p1Y >= fieldY) {
 				p1Y = fieldY;
 				break;
