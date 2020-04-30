@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="landing"/>
+		<item key="selection" value="field"/>
 		<list key="findhistory">
+			<item value="foots"/>
 			<item value="landing"/>
 			<item value="jumpOver"/>
 			<item value="p1Y"/>
@@ -15,6 +16,7 @@
 			<item value="integer1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="field"/>
 			<item value="p1JumpOver"/>
 			<item value="p1Right"/>
 			<item value="p1Left"/>

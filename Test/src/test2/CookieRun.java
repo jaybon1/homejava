@@ -15,7 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 
-public class Cookie1 {
+public class CookieRun {
 
 	private JFrame frame;
 
@@ -37,10 +37,6 @@ public class Cookie1 {
 	long firstTime = CookieUtil.getTime();
 	long nowTime;
 
-	int stair2;
-	int stair1;
-	int field;
-
 	ImageIcon ic = new ImageIcon("img/bonusFirstCookie.png");
 	Image cookie = ic.getImage();
 
@@ -50,7 +46,9 @@ public class Cookie1 {
 	ImageIcon footIc = new ImageIcon("img/land0001_tm003_fh.png");
 	Image foot = footIc.getImage();
 
-	List<Foot> foots = new ArrayList<>();
+	List<Foot> stair2 = new ArrayList<>();
+	List<Foot> stair1 = new ArrayList<>();
+	List<Foot> field = new ArrayList<>();
 
 	/**
 	 * Launch the application.
@@ -59,7 +57,7 @@ public class Cookie1 {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Cookie1 window = new Cookie1();
+					CookieRun window = new CookieRun();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -71,7 +69,7 @@ public class Cookie1 {
 	/**
 	 * Create the application.
 	 */
-	public Cookie1() {
+	public CookieRun() {
 		initialize();
 	}
 
@@ -96,12 +94,26 @@ public class Cookie1 {
 			c1 = new Cookie(cookie, 0, 0, 0);
 			s1 = new Stage(backImg, 0, 0, 0);
 			s2 = new Stage(backImg, 0, backImg.getWidth(null), 0);
-
-			for (int i = 0; i < 5; i++) {
+			
+			for (int i = 0; i < f1.stair2.length(); i++) {
 				int a = i * 124;
-				foots.add(new Foot(foot, 0, a, 200));
-				nowFoot = foots.get(0);
+				if((Integer.parseInt((f1.stair2.charAt(i) + "")) == 1)){
+					field.add(new Foot(foot, 0, a, 100));
+				}
+			}
+			
+			for (int i = 0; i < f1.stair1.length(); i++) {
+				int a = i * 124;
+				if((Integer.parseInt((f1.stair1.charAt(i) + "")) == 1)){
+					field.add(new Foot(foot, 0, a, 150));
+				}
+			}
 
+			for (int i = 0; i < f1.field.length(); i++) {
+				int a = i * 124;
+				if((Integer.parseInt((f1.field.charAt(i) + "")) == 1)){
+					field.add(new Foot(foot, 0, a, 200));
+				}
 			}
 
 			addKeyListener(new KeyAdapter() {
@@ -165,8 +177,8 @@ public class Cookie1 {
 				@Override
 				public void run() {
 					while (true) {
-						for (int i = 0; i < foots.size(); i++) {
-							foots.get(i).setX(foots.get(i).getX() - 1);
+						for (int i = 0; i < field.size(); i++) {
+							field.get(i).setX(field.get(i).getX() - 1);
 						}
 						countFoot++;
 
@@ -188,10 +200,10 @@ public class Cookie1 {
 				@Override
 				public void run() {
 					while (true) {
-						for (int i = 0; i < foots.size(); i++) {
-							int nowFootX = foots.get(i).getX();
+						for (int i = 0; i < field.size(); i++) {
+							int nowFootX = field.get(i).getX();
 							if (nowFootX >= 125 && nowFootX < 248) {
-								nowFoot = foots.get(i);
+								nowFoot = field.get(i);
 							}
 						}
 						try {
@@ -211,18 +223,20 @@ public class Cookie1 {
 
 					while (true) {
 						int pos = c1.getY() + c1.getImage().getHeight(null);
-						if(doubleJump == 0) {
 							if (pos > 400) {
 								landing = 2;
 
 							} else if (pos == 100 && Integer.parseInt((f1.stair2.charAt(footNum) + "")) == 1) {
 								landing = 1;
+								doubleJump = 0;
 								
 							} else if (pos == 150 && Integer.parseInt((f1.stair1.charAt(footNum) + "")) == 1) {
 								landing = 1;
+								doubleJump = 0;
 								
 							} else if (pos == 200 && Integer.parseInt((f1.field.charAt(footNum) + "")) == 1) {
 								landing = 1;
+								doubleJump = 0;
 								
 							} else if (pos < 100) {
 								landing = 0;
@@ -242,8 +256,9 @@ public class Cookie1 {
 							} else if (pos == 200 && Integer.parseInt((f1.field.charAt(footNum) + "")) == 0) {
 								landing = 0;
 
+							} else {
+								landing = 0;
 							}
-						}
 						try {
 							Thread.sleep(100);
 						} catch (InterruptedException e) {
@@ -259,12 +274,7 @@ public class Cookie1 {
 				@Override
 				public void run() {
 					while (true) {
-						System.out.println(c1.getY());
-						System.out.println("landing" + landing);
-						System.out.println("jumpY" + jumpY);
-						System.out.println("fall" + fall);
-
-						if (landing == 0 && jumpY <= 0) {
+						if (landing == 0 && jump == false) {
 							if (fall == false) {
 								fall = true;
 								fall();
@@ -275,7 +285,7 @@ public class Cookie1 {
 						}
 
 						try {
-							Thread.sleep(10);
+							Thread.sleep(100);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -294,9 +304,17 @@ public class Cookie1 {
 					s1.getImage().getHeight(this), this);
 			g.drawImage(s2.getImage(), s2.getX(), s2.getY(), s2.getImage().getWidth(this) + 1,
 					s1.getImage().getHeight(this), this);
+			
+			for (int i = 0; i < stair2.size(); i++) {
+				g.drawImage(stair2.get(i).getImage(), stair2.get(i).getX(), stair2.get(i).getY(), this);
+			}
+			
+			for (int i = 0; i < stair1.size(); i++) {
+				g.drawImage(stair1.get(i).getImage(), stair1.get(i).getX(), stair1.get(i).getY(), this);
+			}
 
-			for (int i = 0; i < foots.size(); i++) {
-				g.drawImage(foots.get(i).getImage(), foots.get(i).getX(), foots.get(i).getY(), this);
+			for (int i = 0; i < field.size(); i++) {
+				g.drawImage(field.get(i).getImage(), field.get(i).getX(), field.get(i).getY(), this);
 			}
 
 			g.drawImage(c1.getImage(), c1.getX(), c1.getY(), this);
@@ -316,9 +334,9 @@ public class Cookie1 {
 				long t2;
 				int set = 1;
 				while (true) {
-					t2 = CookieUtil.getTime() - t1;
-					jumpY = set + (int) ((t2) / 40);
-					c1.setY(c1.getY() + jumpY);
+					if(jump == true) {
+						break;
+					}
 					int pad = c1.getY() + c1.getImage().getHeight(null);
 					if (Integer.parseInt((f1.stair2.charAt(footNum) + "")) == 1 && pad > 101 && pad < 100 + jumpY) {
 						c1.setY(100 - c1.getImage().getHeight(null));
@@ -332,6 +350,9 @@ public class Cookie1 {
 						c1.setY(200 - c1.getImage().getHeight(null));
 						break;
 					}
+					t2 = CookieUtil.getTime() - t1;
+					jumpY = set + (int) ((t2) / 40);
+					c1.setY(c1.getY() + jumpY);
 					try {
 						Thread.sleep(10);
 					} catch (InterruptedException e) {
