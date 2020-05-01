@@ -98,21 +98,21 @@ public class CookieRun {
 			for (int i = 0; i < f1.stair2.length(); i++) {
 				int a = i * 124;
 				if((Integer.parseInt((f1.stair2.charAt(i) + "")) == 1)){
-					field.add(new Foot(foot, 0, a, 100));
+					field.add(new Foot(foot, 0, a, 100, 124, 40));
 				}
 			}
 			
 			for (int i = 0; i < f1.stair1.length(); i++) {
 				int a = i * 124;
 				if((Integer.parseInt((f1.stair1.charAt(i) + "")) == 1)){
-					field.add(new Foot(foot, 0, a, 150));
+					field.add(new Foot(foot, 0, a, 150 ,124 ,40));
 				}
 			}
 
 			for (int i = 0; i < f1.field.length(); i++) {
 				int a = i * 124;
 				if((Integer.parseInt((f1.field.charAt(i) + "")) == 1)){
-					field.add(new Foot(foot, 0, a, 200));
+					field.add(new Foot(foot, 0, a, 200, 124, 40));
 				}
 			}
 

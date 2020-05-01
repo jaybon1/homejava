@@ -14,4 +14,6 @@ public class Foot {
 	int type;
 	int x;
 	int y;
+	int width;
+	int height;
 }

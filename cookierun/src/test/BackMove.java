@@ -88,10 +88,10 @@ public class BackMove {
 						// 1번이미지가 먼저 나가서 2번 뒤에 붙고
 						// 2번이미지가 나가면 다시 1 번뒤에 붙는다
 						if(back1X < -(backImg.getWidth(null))) {
-							back1X = backImg.getWidth(null)-1;
+							back1X = backImg.getWidth(null);
 						}
 						if(back2X < -(backImg.getWidth(null))) {
-							back2X = backImg.getWidth(null)-1;
+							back2X = backImg.getWidth(null);
 						}
 						repaint();
 						try {
