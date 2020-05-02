@@ -8,6 +8,15 @@ import javax.imageio.ImageIO;
 
 public class Bf {
 	
+	static int[] getSize(String src) throws Exception {
+		File imgf = new File(src);
+		BufferedImage img = ImageIO.read(imgf);
+		int width = img.getWidth();
+		int height = img.getHeight();
+		int[] tempPos = {width, height};
+		return tempPos;
+	}
+	
 	static int[][] getPic(String src) throws Exception{
 		File imgf = new File(src);
 		BufferedImage img = ImageIO.read(imgf);
@@ -27,8 +36,20 @@ public class Bf {
         int x = 10;
         int y = 21;
         try {
-        	System.out.printf("이미지 픽셀 좌표 X:%d  Y:%d의 색값은 ", x, y);
-			System.out.println(getPic("img/testbf.png")[x][y]);
+        	int[] tempArr1 = getSize("img/map1.png");
+        	int maxX = tempArr1[0];
+        	int maxY = tempArr1[1];
+        	
+        	int[][] tempArr = getPic("img/map1.png");
+        	
+        	for (int i = 0; i <	 maxX; i+=4) {
+        		for (int j = 0; j < maxY; j+=4) {
+        			if(tempArr[i][j] == 0) {
+        				System.out.printf("장판 좌표 : %d, %d \n", i, j);
+        			}
+					
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

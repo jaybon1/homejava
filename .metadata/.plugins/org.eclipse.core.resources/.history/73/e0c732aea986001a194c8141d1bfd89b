@@ -1,9 +1,0 @@
-package example;
-
-// 기능을 함수화하기
-
-public class Function1 {
-	public static void main(String[] args) {
-		
-	}
-}

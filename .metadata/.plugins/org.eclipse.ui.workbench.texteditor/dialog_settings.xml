@@ -6,8 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="img.getH"/>
+		<item key="selection" value="new Main"/>
 		<list key="findhistory">
+			<item value="new Main"/>
+			<item value="new main"/>
+			<item value="new"/>
+			<item value="tempY"/>
+			<item value="setState"/>
+			<item value="getState"/>
+			<item value="super"/>
 			<item value="img.getH"/>
 			<item value="img.get"/>
 			<item value="ic.geth"/>
@@ -16,12 +23,10 @@
 			<item value="system"/>
 			<item value="foots"/>
 			<item value="landing"/>
-			<item value="jumpOver"/>
-			<item value="p1Y"/>
-			<item value="integer2"/>
-			<item value="integer1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="setAlpha"/>
+			<item value="getAlpha"/>
 			<item value="field"/>
 			<item value="p1JumpOver"/>
 			<item value="p1Right"/>
