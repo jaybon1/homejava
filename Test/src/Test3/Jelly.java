@@ -10,15 +10,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Jelly {
-	Image image; // 젤리 이미지
+	private Image image; // 젤리 이미지
 	
 	// 젤리들의 좌표와 크기
-	int x;
-	int y;
-	int width;
-	int height;
+	private int x;
+	private int y;
+	private int width;
+	private int height;
 	
-	// 젤리의 투명도 (0이 투명이며 255가 불투명이다)
-	int alpha;
+	// 젤리의 점수
+	private int score;
 }
 

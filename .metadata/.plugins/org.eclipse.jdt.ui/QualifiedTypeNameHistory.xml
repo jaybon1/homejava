@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="exModule.Module1"/>
-<fullyQualifiedTypeName name="slug.SlugMain.Jp1"/>
 <fullyQualifiedTypeName name="slug.Slug1.MyJp"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
@@ -39,10 +37,7 @@
 <fullyQualifiedTypeName name="java.awt.event.KeyAdapter"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="Test3.Jelly"/>
-<fullyQualifiedTypeName name="lombok.Data"/>
 <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
 <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="gui.user.Login"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="Test3.Human"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="Test4.Util"/>
+<fullyQualifiedTypeName name="Test4.Cookie"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

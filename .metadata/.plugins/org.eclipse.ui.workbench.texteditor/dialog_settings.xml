@@ -6,25 +6,32 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="new Main"/>
+		<item key="selection" value="foot"/>
 		<list key="findhistory">
+			<item value="foot"/>
+			<item value=".is"/>
+			<item value="back12."/>
+			<item value="back11."/>
+			<item value="cookie1."/>
+			<item value="b2."/>
+			<item value="b1."/>
+			<item value="c1."/>
+			<item value="rcf"/>
+			<item value="dout"/>
+			<item value="dout&apos;"/>
+			<item value="ender"/>
 			<item value="new Main"/>
 			<item value="new main"/>
 			<item value="new"/>
-			<item value="tempY"/>
-			<item value="setState"/>
-			<item value="getState"/>
-			<item value="super"/>
-			<item value="img.getH"/>
-			<item value="img.get"/>
-			<item value="ic.geth"/>
-			<item value="ic.get"/>
-			<item value="Sys"/>
-			<item value="system"/>
-			<item value="foots"/>
-			<item value="landing"/>
 		</list>
 		<list key="replacehistory">
+			<item value="b12."/>
+			<item value="b11."/>
+			<item value="c1."/>
+			<item value="back12."/>
+			<item value="back11."/>
+			<item value="cookie1."/>
+			<item value="cookie1"/>
 			<item value="setAlpha"/>
 			<item value="getAlpha"/>
 			<item value="field"/>
@@ -34,8 +41,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1435"/>
-		<item key="DIALOG_Y_ORIGIN" value="408"/>
+		<item key="DIALOG_X_ORIGIN" value="1288"/>
+		<item key="DIALOG_Y_ORIGIN" value="414"/>
 		<item key="DIALOG_WIDTH" value="271"/>
 		<item key="DIALOG_HEIGHT" value="336"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
