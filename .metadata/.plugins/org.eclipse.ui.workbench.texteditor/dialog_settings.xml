@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="foot"/>
+		<item key="selection" value="face"/>
 		<list key="findhistory">
+			<item value="face"/>
 			<item value="foot"/>
 			<item value=".is"/>
 			<item value="back12."/>
@@ -22,7 +23,6 @@
 			<item value="ender"/>
 			<item value="new Main"/>
 			<item value="new main"/>
-			<item value="new"/>
 		</list>
 		<list key="replacehistory">
 			<item value="b12."/>
