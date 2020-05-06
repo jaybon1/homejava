@@ -10,17 +10,17 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 
 public class BackMove {
-	ImageIcon jellyIc1= new ImageIcon("img/jelly1.png");
+	ImageIcon jellyIc1= new ImageIcon("img/jelly1Test.png");
 	Image jelly1 = jellyIc1.getImage();
 	
-	ImageIcon bonusFirstCookieIc = new ImageIcon("img/bonusFirstCookie.png");
+	ImageIcon bonusFirstCookieIc = new ImageIcon("img/cookieTest.png");
 	Image bonusFirstCookie = bonusFirstCookieIc.getImage();
 	
-	ImageIcon backIc = new ImageIcon("img/back1.png");
+	ImageIcon backIc = new ImageIcon("img/test1.png");
 	Image backImg = backIc.getImage();
 	
 	//jelly1 이미지
-	int jelly1X = 2000;
+	int jelly1X = 1000;
 	
 	// 1번째 이미지
 	int back1X = 0;
@@ -58,7 +58,7 @@ public class BackMove {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 600, 350);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new MyPanel();
@@ -77,25 +77,25 @@ public class BackMove {
 				public void run() {
 					while (true) {
 						
-						jelly1X--;
+						jelly1X-=3;
 						
-						back1X--;
-						back2X--;
+						back1X-=3;
+						back2X-=3;
 						
 						// 이미지가 화면밖으로 완전히 나가면
 						// X축을 이미지의 넓이좌표로 다시 옮긴다
 						
 						// 1번이미지가 먼저 나가서 2번 뒤에 붙고
 						// 2번이미지가 나가면 다시 1 번뒤에 붙는다
-						if(back1X < -(backImg.getWidth(null))) {
+						if(back1X < -(backImg.getWidth(null)-1)) {
 							back1X = backImg.getWidth(null);
 						}
-						if(back2X < -(backImg.getWidth(null))) {
+						if(back2X < -(backImg.getWidth(null)-1)) {
 							back2X = backImg.getWidth(null);
 						}
 						repaint();
 						try {
-							Thread.sleep(2);
+							Thread.sleep(10);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}

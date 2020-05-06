@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="java.sql.Timestamp"/>
-<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-<fullyQualifiedTypeName name="slug.Test2.MyP"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="example.Info"/>
-<fullyQualifiedTypeName name="example.TestDB"/>
 <fullyQualifiedTypeName name="sms.SmsEx2"/>
 <fullyQualifiedTypeName name="javafx.embed.swing.JFXPanel"/>
 <fullyQualifiedTypeName name="javafx.application.Platform"/>
@@ -22,7 +11,6 @@
 <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.awt.image.PixelGrabber"/>
-<fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="Test3.MyFrame"/>
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
 <fullyQualifiedTypeName name="java.awt.image.CropImageFilter"/>
@@ -32,7 +20,6 @@
 <fullyQualifiedTypeName name="Test3.Foot"/>
 <fullyQualifiedTypeName name="java.awt.RadialGradientPaint"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
-<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 <fullyQualifiedTypeName name="Test3.Jelly"/>
 <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
 <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
@@ -41,23 +28,36 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="gui.user.CustomUI"/>
 <fullyQualifiedTypeName name="gui.user.Login"/>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="Test3.Human"/>
 <fullyQualifiedTypeName name="lombok.Data"/>
 <fullyQualifiedTypeName name="Test4.Cookie"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="Test4.Util"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicTreeUI.TreeCancelEditingAction"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.awt.Button"/>
-<fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
 <fullyQualifiedTypeName name="java.awt.event.KeyAdapter"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="Test5.CookieRun.LoginPanel"/>
+<fullyQualifiedTypeName name="java.awt.TextField"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="Test5.CookieRun"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JPasswordField"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
 </qualifiedTypeNameHistroy>
