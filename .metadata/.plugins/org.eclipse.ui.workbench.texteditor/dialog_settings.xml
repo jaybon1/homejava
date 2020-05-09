@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="face"/>
+		<item key="selection" value="paint"/>
 		<list key="findhistory">
+			<item value="paint"/>
+			<item value="b11"/>
+			<item value="escKeyOn"/>
 			<item value="face"/>
 			<item value="foot"/>
 			<item value=".is"/>
@@ -20,9 +23,6 @@
 			<item value="rcf"/>
 			<item value="dout"/>
 			<item value="dout&apos;"/>
-			<item value="ender"/>
-			<item value="new Main"/>
-			<item value="new main"/>
 		</list>
 		<list key="replacehistory">
 			<item value="b12."/>
