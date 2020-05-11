@@ -72,6 +72,17 @@ public class GamePanel extends JPanel {
 	// 체력 게이지
 	private ImageIcon lifeBar;
 
+	private ImageIcon redBg; // 피격시 붉은 화면
+
+	private ImageIcon jumpButtonIconUp;
+	private ImageIcon jumpButtonIconDown;
+
+	private ImageIcon slideIconUp;
+	private ImageIcon slideIconDown;
+
+	Image jumpBtn;
+	Image slideBtn;
+
 	// 리스트 생성
 	private List<Jelly> jellyList; // 젤리 리스트
 
@@ -89,7 +100,7 @@ public class GamePanel extends JPanel {
 
 	private int resultScore = 0; // 결과점수를 수집하는 변수
 
-	private int gameSpeed = 4; // 게임 속도
+	private int gameSpeed = 5; // 게임 속도
 
 	private int nowField = 2000; // 발판의 높이를 저장.
 
@@ -100,6 +111,8 @@ public class GamePanel extends JPanel {
 	private boolean escKeyOn = false; // 일시정지를 위한 esc키 확인
 
 	private boolean downKeyOn = false; // 다운키 눌렀는지 여부
+
+	private boolean redScreen = false; // 피격시 반짝 붉은 화면 여부
 
 	int face; // 쿠키의 정면
 	int foot; // 쿠키의 발
@@ -204,11 +217,10 @@ public class GamePanel extends JPanel {
 		buffg.drawImage(b21.getImage(), b21.getX(), 0, b21.getWidth(), b21.getHeight() * 5 / 4, null);
 		buffg.drawImage(b22.getImage(), b22.getX(), 0, b22.getWidth(), b22.getHeight() * 5 / 4, null);
 
-		
-		// 페이드아웃 인 효과
-		if(fadeOn) {
+		// 스테이지 넘어갈시 페이드아웃 인 효과
+		if (fadeOn) {
 			buffg.setColor(backFade); // 투명하게 하는방법 1
-			buffg.fillRect(0, 0, this.getWidth(), this.getHeight());			
+			buffg.fillRect(0, 0, this.getWidth(), this.getHeight());
 		}
 
 		// 발판을 그린다
@@ -231,13 +243,14 @@ public class GamePanel extends JPanel {
 			Jelly tempJelly = jellyList.get(i);
 
 			if (tempJelly.getX() > -90 && tempJelly.getX() < 810) {
-				
-				alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) tempJelly.getAlpha() / 255); 
-				g2.setComposite(alphaComposite);  // 투명하게 하는방법 2
+
+				alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER,
+						(float) tempJelly.getAlpha() / 255);
+				g2.setComposite(alphaComposite); // 투명하게 하는방법 2
 
 				buffg.drawImage(tempJelly.getImage(), tempJelly.getX(), tempJelly.getY(), tempJelly.getWidth(),
 						tempJelly.getHeight(), null);
-				
+
 				// alpha값을 되돌린다
 				alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) 255 / 255);
 				g2.setComposite(alphaComposite);
@@ -258,7 +271,7 @@ public class GamePanel extends JPanel {
 
 		if (c1.isInvincible()) { // 무적상태일 경우
 			// 쿠키의 alpha값을 받아온다
-			alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) c1.getAlpha() / 255); 
+			alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) c1.getAlpha() / 255);
 			g2.setComposite(alphaComposite);
 
 			// 쿠키를 그린다
@@ -276,12 +289,23 @@ public class GamePanel extends JPanel {
 					cookieIc.getImage().getWidth(null) * 8 / 10, cookieIc.getImage().getHeight(null) * 8 / 10, null);
 		}
 
-		// 점수를 그린다
+		// 피격시 붉은 화면
+		if (redScreen) {
+
+			alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) 125 / 255);
+			g2.setComposite(alphaComposite);
+
+			buffg.drawImage(redBg.getImage(), 0, 0, this.getWidth(), this.getHeight(), null);
+
+			alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) 255 / 255);
+			g2.setComposite(alphaComposite);
+		}
 
 //		buffg.setFont(new Font("Arial", Font.BOLD, 30));
 //		buffg.setColor(Color.WHITE);
 //		buffg.drawString(Integer.toString(resultScore), 700, 85);
 
+		// 점수를 그린다
 		Util.drawFancyString(g2, Integer.toString(resultScore), 600, 58, 30, Color.WHITE);
 
 		// 체력게이지를 그린다
@@ -289,6 +313,10 @@ public class GamePanel extends JPanel {
 		buffg.setColor(Color.BLACK);
 		buffg.fillRect(84 + (int) (470 * ((double) c1.getHealth() / 1000)), 65,
 				1 + 470 - (int) (470 * ((double) c1.getHealth() / 1000)), 21);
+
+		// 버튼을 그린다
+		buffg.drawImage(jumpBtn, 0, 360, 132, 100, null);
+		buffg.drawImage(slideBtn, 650, 360, 132, 100, null);
 
 		if (escKeyOn) { // esc키를 누를경우 화면을 흐리게 만든다
 
@@ -470,6 +498,20 @@ public class GamePanel extends JPanel {
 		// 생명게이지 이미지아이콘
 		lifeBar = new ImageIcon("img/Objectimg/lifebar/lifeBar1.png");
 
+		// 피격 붉은 이미지
+		redBg = new ImageIcon("img/Objectimg/lifebar/redBg.png");
+
+		// 점프버튼
+		jumpButtonIconUp = new ImageIcon("img/Objectimg/lifebar/jumpno.png");
+		jumpButtonIconDown = new ImageIcon("img/Objectimg/lifebar/jumpdim.png");
+
+		// 슬라이드 버튼
+		slideIconUp = new ImageIcon("img/Objectimg/lifebar/slideno.png");
+		slideIconDown = new ImageIcon("img/Objectimg/lifebar/slidedim.png");
+
+		jumpBtn = jumpButtonIconUp.getImage();
+		slideBtn = slideIconUp.getImage();
+
 		jellyList = new ArrayList<>(); // 젤리 리스트
 
 		fieldList = new ArrayList<>(); // 발판 리스트
@@ -557,13 +599,14 @@ public class GamePanel extends JPanel {
 				}
 
 				if (!escKeyOn) {
-					if (e.getKeyCode() == KeyEvent.VK_SPACE && c1.getCountJump() < 2) { // 스페이스 키를 누르고 더블점프가 2가 아닐때
-
-						jump(); // 점프 메서드 가동
-
+					if (e.getKeyCode() == KeyEvent.VK_SPACE) {// 스페이스 키를 누르고 더블점프가 2가 아닐때
+						jumpBtn = jumpButtonIconDown.getImage();
+						if (c1.getCountJump() < 2) {
+							jump(); // 점프 메서드 가동
+						}
 					}
 					if (e.getKeyCode() == KeyEvent.VK_DOWN) { // 다운키를 눌렀을 때
-
+						slideBtn = slideIconDown.getImage();
 						downKeyOn = true; // downKeyOn 변수를 true로
 
 						if (c1.getImage() != slideIc.getImage() // 쿠키이미지가 슬라이드 이미지가 아니고
@@ -581,7 +624,7 @@ public class GamePanel extends JPanel {
 			public void keyReleased(KeyEvent e) {
 
 				if (e.getKeyCode() == KeyEvent.VK_DOWN) { // 다운키를 뗐을 때
-
+					slideBtn = slideIconUp.getImage();
 					downKeyOn = false; // downKeyOn 변수를 false로
 
 					if (c1.getImage() != cookieIc.getImage() // 쿠키이미지가 기본이미지가 아니고
@@ -590,6 +633,10 @@ public class GamePanel extends JPanel {
 
 						c1.setImage(cookieIc.getImage()); // 이미지를 기본이미지로 변경
 					}
+				}
+
+				if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+					jumpBtn = jumpButtonIconUp.getImage();
 				}
 			}
 		});
@@ -660,7 +707,7 @@ public class GamePanel extends JPanel {
 								public void run() {
 
 									backFadeOut();
-									
+
 									b11 = new Back(backIc4.getImage(), 0, 0, backIc4.getImage().getWidth(null),
 											backIc4.getImage().getHeight(null));
 
@@ -674,7 +721,7 @@ public class GamePanel extends JPanel {
 									b22 = new Back(secondBackIc4.getImage(), secondBackIc4.getImage().getWidth(null), 0,
 											secondBackIc4.getImage().getWidth(null),
 											secondBackIc4.getImage().getHeight(null));
-									
+
 									backFadeIn();
 									fadeOn = false;
 								}
@@ -705,7 +752,7 @@ public class GamePanel extends JPanel {
 									b22 = new Back(secondBackIc3.getImage(), secondBackIc3.getImage().getWidth(null), 0,
 											secondBackIc3.getImage().getWidth(null),
 											secondBackIc3.getImage().getHeight(null));
-									
+
 									backFadeIn();
 									fadeOn = false;
 								}
@@ -722,7 +769,7 @@ public class GamePanel extends JPanel {
 								public void run() {
 
 									backFadeOut();
-									
+
 									b11 = new Back(backIc2.getImage(), 0, 0, backIc2.getImage().getWidth(null),
 											backIc2.getImage().getHeight(null));
 
@@ -736,7 +783,7 @@ public class GamePanel extends JPanel {
 									b22 = new Back(secondBackIc2.getImage(), secondBackIc2.getImage().getWidth(null), 0,
 											secondBackIc2.getImage().getWidth(null),
 											secondBackIc2.getImage().getHeight(null));
-									
+
 									backFadeIn();
 									fadeOn = false;
 								}
@@ -796,8 +843,8 @@ public class GamePanel extends JPanel {
 						} else {
 
 							tempJelly.setX(tempJelly.getX() - gameSpeed); // 위 조건에 해당이 안되면 x좌표를 줄이자
-							if(tempJelly.getImage() == jellyEffectIc.getImage() && tempJelly.getAlpha() > 4) {
-								tempJelly.setAlpha(tempJelly.getAlpha()- 5);
+							if (tempJelly.getImage() == jellyEffectIc.getImage() && tempJelly.getAlpha() > 4) {
+								tempJelly.setAlpha(tempJelly.getAlpha() - 5);
 							}
 
 							foot = c1.getY() + c1.getHeight(); // 캐릭터 발 위치 재스캔
@@ -964,6 +1011,8 @@ public class GamePanel extends JPanel {
 
 				System.out.println("피격무적시작");
 
+				redScreen = true; // 피격 붉은 이펙트 시작
+
 				c1.setHealth(c1.getHealth() - 100); // 쿠키의 체력을 100 깎는다
 
 				c1.setImage(hitIc.getImage()); // 쿠키를 부딛힌 모션으로 변경
@@ -971,7 +1020,15 @@ public class GamePanel extends JPanel {
 				c1.setAlpha(80); // 쿠키의 투명도를 80으로 변경
 
 				try { // 0.5초 대기
-					Thread.sleep(500);
+					Thread.sleep(250);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+
+				redScreen = false; // 피격 붉은 이펙트 종료
+
+				try { // 0.5초 대기
+					Thread.sleep(250);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
