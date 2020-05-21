@@ -1,10 +1,22 @@
+content_assist_autoactivation=true
+content_assist_autoactivation_delay=0
+content_assist_autoactivation_triggers_java=.qwertyuiopasdfghjklzxcvbnm
+content_assist_category_order=org.eclipse.wst.jsdt.ui.templateProposalCategory\:0\u0000org.eclipse.wst.jsdt.ui.javaNoTypeProposalCategory\:1\u0000org.eclipse.wst.jsdt.ui.textProposalCategory\:65537\u0000org.eclipse.wst.jsdt.ui.genericProposalCategory\:3\u0000org.eclipse.wst.jsdt.ui.defaultProposalCategory\:4\u0000
 eclipse.preferences.version=1
 fontPropagated=true
 org.eclipse.jface.textfont=1|Fixedsys|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|-127|1|2|1|49|Fixedsys;
+org.eclipse.wst.jsdt.internal.ui.navigator.layout=1
 org.eclipse.wst.jsdt.ui.editor.tab.width=
+org.eclipse.wst.jsdt.ui.exception.name=e
 org.eclipse.wst.jsdt.ui.formatterprofiles.version=11
+org.eclipse.wst.jsdt.ui.gettersetter.use.is=true
 org.eclipse.wst.jsdt.ui.javadoclocations.migrated=true
+org.eclipse.wst.jsdt.ui.text.code_templates_migrated=true
+org.eclipse.wst.jsdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.wst.jsdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.wst.jsdt.ui.text.templates_migrated=true
 proposalOrderMigrated=true
+sourceHoverBackgroundColor=44,49,53
 tabWidthPropagated=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

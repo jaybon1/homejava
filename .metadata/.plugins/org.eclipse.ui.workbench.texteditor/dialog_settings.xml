@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="paint"/>
+		<item key="selection" value="utf-8"/>
 		<list key="findhistory">
+			<item value="EUC-KR"/>
 			<item value="paint"/>
 			<item value="b11"/>
 			<item value="escKeyOn"/>
@@ -22,9 +23,9 @@
 			<item value="c1."/>
 			<item value="rcf"/>
 			<item value="dout"/>
-			<item value="dout&apos;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="utf-8"/>
 			<item value="b12."/>
 			<item value="b11."/>
 			<item value="c1."/>
@@ -41,7 +42,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1288"/>
+		<item key="DIALOG_X_ORIGIN" value="1366"/>
 		<item key="DIALOG_Y_ORIGIN" value="414"/>
 		<item key="DIALOG_WIDTH" value="271"/>
 		<item key="DIALOG_HEIGHT" value="336"/>
